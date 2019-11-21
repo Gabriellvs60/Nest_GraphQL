@@ -29,6 +29,4 @@ export class ClientsResolver {
     async deleteUser({ id }): Promise<boolean> {
     return this.clientService.delete(id);
   }
-
-
 }
