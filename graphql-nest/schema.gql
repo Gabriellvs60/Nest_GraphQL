@@ -8,15 +8,27 @@ type CreateCatsDto {
   nickName: String!
 }
 
+type CreateClientsDto {
+  name: String!
+  phone: String!
+}
+
 input inputCat {
   name: String!
   nickName: String!
 }
 
+input inputClient {
+  name: String!
+  phone: String!
+}
+
 type Mutation {
   createCat(data: inputCat!): CreateCatsDto!
+  createClient(data: inputClient!): CreateClientsDto!
 }
 
 type Query {
   listCats: [CreateCatsDto!]!
+  getClients: [CreateClientsDto!]!
 }
